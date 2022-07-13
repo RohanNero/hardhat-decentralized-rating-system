@@ -12,3 +12,6 @@ All of my projects pertaining to information and data will always be completely 
 
 
 If you would like to help or assist in anyway, that would be greatly appreciated!
+
+
+ *If you feel like buying me a coffee ;) **0xe4A98D2bFD66Ce08128FdFFFC9070662E489a28E***
