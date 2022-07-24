@@ -14,13 +14,13 @@
 const { network, getNamedAccounts } = require("hardhat")
 
 module.exports = async function ({getNamedAccounts, deployments}) {
-  console.log("hi!")
+  console.log("Deploying...")
   const { deploy, log } = deployments
   const { deployer } = await getNamedAccounts()
 
   const ratingSystem = await deploy("RatingSystem", {
     from: deployer,
-    args: [deployer],
+    args: [],
     log: true,
     waitConfirmations: network.config.blockConfirmations || 1,
   })
