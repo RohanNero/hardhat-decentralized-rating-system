@@ -6,3 +6,4 @@ typechain
 deployments
 cache
 artifacts
+gas-report.txt

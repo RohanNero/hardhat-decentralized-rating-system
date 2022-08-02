@@ -16,7 +16,7 @@ const { network, getNamedAccounts } = require("hardhat")
 module.exports = async function ({getNamedAccounts, deployments}) {
   console.log("Deploying...")
   const { deploy, log } = deployments
-  const { deployer } = await getNamedAccounts()
+  const { deployer } = (await getNamedAccounts()).deployer
 
   const ratingSystem = await deploy("RatingSystem", {
     from: deployer,

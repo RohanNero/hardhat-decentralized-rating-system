@@ -19,7 +19,7 @@
     "solhint": "^3.3.7",
     "solidity-coverage": "^0.7.21"
   },
-  "name": "carDatabase_backend",
+  "name": "RatingSystem",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",

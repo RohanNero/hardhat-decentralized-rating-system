@@ -6,20 +6,19 @@ require("dotenv").config()
 require("solidity-coverage")
 require("hardhat-deploy")
 
-
-const RINKEBY_PRIVATE_KEY = process.env.RINKEBY_PRIVATE_KEY
-const RINKEBY_URL = process.env.RINKEBY_URL
-const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
+const RINKEBY_PRIVATE_KEY = process.env.RINKEBY_PRIVATE_KEY || "0xkey"
+const RINKEBY_URL = process.env.RINKEBY_URL || "https://eth-rinkeby"
+const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY || "key"
+const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY || "key"
 
 module.exports = {
   namedAccounts: {
     deployer: {
       default: 0, // here this will by default take the first account as deployer
-      1: 0,       // similarly on mainnet it will take the first account as deployer. 
-                  // Note though that depending on how hardhat network are configured, 
-                  // the account 0 on one network can be different than on another
+      1: 0, // similarly on mainnet it will take the first account as deployer.
+      // Note though that depending on how hardhat network are configured,
+      // the account 0 on one network can be different than on another
     },
-
   },
   solidity: "0.8.7",
   networks: {
@@ -35,7 +34,12 @@ module.exports = {
     },
   },
   gasReporter: {
-    enabled: false,
+    enabled: true,
+    outputFile: "gas-report.txt",
+    noColors: true,
+    currency: "USD",
+    coinmarketcap: COINMARKETCAP_API_KEY,
+    token: "MATIC",
   },
   etherscan: {
     apiKey: ETHERSCAN_API_KEY,
