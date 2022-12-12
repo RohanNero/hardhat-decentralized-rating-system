@@ -7,3 +7,5 @@ My goal is to utilize the internet in a more efficient manner by creating UI/UX 
 All of my projects pertaining to information and data will always be completely non-profit and for the public good. I believe knowledge is power, and that power should be more evenly distributed amongst Earth's population.
 
 If you would like to help or contribute in any way, that would be greatly appreciated!
+
+---
