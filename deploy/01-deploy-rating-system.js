@@ -11,13 +11,12 @@
 //     const { getNamedAccounts, deployments } = hre
 //  }
 
-const { network, getNamedAccounts } = require("hardhat")
+const { network, ethers } = require("hardhat")
 
-module.exports = async function ({getNamedAccounts, deployments}) {
+module.exports = async ({getNamedAccounts, deployments}) => {
   console.log("Deploying...")
   const { deploy, log } = deployments
-  const { deployer } = (await getNamedAccounts()).deployer
-
+  const { deployer } = await getNamedAccounts()
   const ratingSystem = await deploy("RatingSystem", {
     from: deployer,
     args: [],
